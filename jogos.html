@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos - Heróis da Natureza</title>
+  <link rel="stylesheet" href="geral.css1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #e6fff2;
+      text-align: center;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      color: #228B22;
+      font-size: 2.2rem;
+    }
+
+    .question-box {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .question {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .options button {
+      display: block;
+      background-color: #b2f0dc;
+      color: #333;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px auto;
+      cursor: pointer;
+      width: 80%;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .options button:hover {
+      background-color: #91e3cb;
+    }
+
+    #result {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fffacd;
+      border-radius: 15px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Heróis da Natureza</h1>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="index.html">QG da natureza</a>
+    <a href="conhecaovilao.html">Conheça o vilão!</a>
+    <a href="chamasverdes.html">Time de heróis!</a>
+    <a href="jogos.html">Treinamento do herói</a>
+  </nav>
+</header>
+
+
+<h1>🎮 Treinamento do Herói – Quiz Contra as Queimadas</h1>
+
+<div id="quiz-container" class="question-box"></div>
+<div id="result"></div>
+
+<script>
+  const perguntas = [
+    // Nível 1
+    {
+      pergunta: "O que o fogo faz com a floresta?",
+      opcoes: ["Dá comida para os animais", "Faz chover", "Queima as árvores e espanta os bichos"],
+      correta: 2
+    },
+    {
+      pergunta: "Podemos brincar com fogo perto do mato?",
+      opcoes: ["Sim", "Não", "Só quando os adultos deixam"],
+      correta: 1
+    },
+    {
+      pergunta: "O que devemos fazer se virmos alguém colocando fogo no quintal?",
+      opcoes: ["Ajudar", "Brincar com a fumaça", "Avisar um adulto"],
+      correta: 2
+    },
+    {
+      pergunta: "Soltar balão é perigoso por quê?",
+      opcoes: ["Pode causar queimadas", "Porque balões voam", "Porque os balões são barulhentos"],
+      correta: 0
+    },
+    {
+      pergunta: "Quando tem queimada, o que aparece no céu?",
+      opcoes: ["Estrelas", "Nuvens coloridas", "Fumaça"],
+      correta: 2
+    },
+
+    // Nível 2
+    {
+      pergunta: "Qual dessas atitudes ajuda a evitar queimadas?",
+      opcoes: ["Queimar folhas secas", "Jogar lixo no mato", "Cuidar das plantas e do lixo corretamente"],
+      correta: 2
+    },
+    {
+      pergunta: "Por que os animais fogem quando há fogo?",
+      opcoes: ["Porque ficam com fome", "Porque o fogo machuca e destrói o lugar onde vivem", "Porque querem brincar"],
+      correta: 1
+    },
+    {
+      pergunta: "Por que não devemos jogar bituca de cigarro no chão?",
+      opcoes: ["Porque é feio", "Porque pode causar fogo", "Porque é muito cheiroso"],
+      correta: 1
+    },
+    {
+      pergunta: "O que podemos fazer com o lixo seco (papel, plástico, latinhas)?",
+      opcoes: ["Jogar no rio", "Queimar tudo", "Separar para reciclar"],
+      correta: 2
+    },
+    {
+      pergunta: "O que acontece com o ar quando tem muita fumaça de queimadas?",
+      opcoes: ["Fica limpo", "Fica poluído", "Fica mais cheiroso"],
+      correta: 1
+    },
+
+    // Nível 3
+    {
+      pergunta: "Como o fogo se espalha mais rápido em uma queimada?",
+      opcoes: ["Com vento e folhas secas no chão", "Com chuva e solo molhado", "Quando está frio"],
+      correta: 0
+    },
+    {
+      pergunta: "Por que é importante cuidar da natureza mesmo morando na cidade?",
+      opcoes: ["Porque as plantas deixam tudo mais bonito", "Porque a natureza ajuda o planeta e todas as pessoas", "Porque os animais moram na cidade"],
+      correta: 1
+    },
+    {
+      pergunta: "O que é melhor fazer com folhas secas no quintal?",
+      opcoes: ["Juntar e queimar tudo", "Deixar espalhadas", "Juntar e colocar no lixo certo ou fazer compostagem"],
+      correta: 2
+    },
+    {
+      pergunta: "O que os bombeiros fazem quando tem uma queimada grande?",
+      opcoes: ["Vão embora porque é perigoso", "Usam água e equipamentos para apagar o fogo", "Pedem para os animais ajudarem"],
+      correta: 1
+    },
+    {
+      pergunta: "Por que as queimadas são ruins para o planeta?",
+      opcoes: ["Porque deixam tudo bagunçado", "Porque acabam com a vida das plantas, dos animais e poluem o ar", "Porque é difícil de limpar depois"],
+      correta: 1
+    }
+  ];
+
+  let perguntasAleatorias = perguntas.sort(() => Math.random() - 0.5);
+  let perguntaAtual = 0;
+  let pontuacao = 0;
+
+  function mostrarPergunta() {
+    if (perguntaAtual >= perguntasAleatorias.length) {
+      mostrarResultado();
+      return;
+    }
+
+    const pergunta = perguntasAleatorias[perguntaAtual];
+    const container = document.getElementById("quiz-container");
+    container.innerHTML = `
+      <div class="question">${pergunta.pergunta}</div>
+      <div class="options">
+        ${pergunta.opcoes.map((opcao, index) =>
+          `<button onclick="verificarResposta(${index})">${opcao}</button>`
+        ).join("")}
+      </div>
+    `;
+  }
+
+  function verificarResposta(respostaEscolhida) {
+    if (respostaEscolhida === perguntasAleatorias[perguntaAtual].correta) {
+      pontuacao++;
+    }
+    perguntaAtual++;
+    mostrarPergunta();
+  }
+
+  function mostrarResultado() {
+    const container = document.getElementById("quiz-container");
+    const resultado = document.getElementById("result");
+    container.style.display = "none";
+    resultado.style.display = "block";
+
+    let mensagem = "";
+
+    if (pontuacao < 5) {
+      mensagem = "Puxa, parece que você ainda não dominou todos os poderes da natureza. Que tal treinar mais para se tornar um grande herói?";
+    } else if (pontuacao < 11) {
+      mensagem = "Muito bem, jovem protetor da natureza! Você está no caminho! Continue treinando!";
+    } else if (pontuacao < 15) {
+      mensagem = "Excelente, você já pode se considerar um grande herói! Continue assim!";
+    } else {
+      mensagem = "Lendário e imbatível! Você é um verdadeiro Herói da Natureza! O meio ambiente agradece sua coragem e sabedoria!";
+    }
+
+    resultado.innerHTML = `
+      <h2>Seu resultado:</h2>
+      <p>Você acertou <strong>${pontuacao}</strong> de ${perguntasAleatorias.length} perguntas.</p>
+      <p>${mensagem}</p>
+    `;
+  }
+
+  mostrarPergunta();
+
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+</script>
+
+<div class="botoes-acao">
+  <a href="index.html" class="botao">🏠 Voltar para o QG</a>
+</div>
+
+<footer>
+  Feito com 💚 por Green Flames
+</footer>
+
+</body>
+</html>

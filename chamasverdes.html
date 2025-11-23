@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - Heróis da Natureza</title>
+  <link rel="stylesheet" href="geral.css1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Heróis da Natureza</h1>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <a href="index.html">QG da natureza</a>
+      <a href="conhecaovilao.html">Conheça o vilão!</a>
+      <a href="chamasverdes.html">Time de heróis!</a>
+      <a href="jogos.html">Treinamento do herói</a>
+    </nav>
+  </header>
+
+  <main class="home">
+    <!-- ajuste para usar imagem local -->
+    <img src="imagens/equipe.png.jpeg" alt="Imagem da equipe" class="imagem-equipe">
+
+    <section class="intro">
+      <h2>Quem somos?</h2>
+      <p>Somos o Green Flames, um projeto criado com o objetivo de conscientizar crianças sobre os perigos das queimadas e a importância de cuidar da natureza. Acreditamos que o aprendizado pode ser divertido e transformador!</p>
+      <p>Nossa missão é inspirar os pequenos a se tornarem verdadeiros heróis do meio ambiente, usando jogos, arte e criatividade.</p>
+      <p>Junte-se a nós nessa jornada e vamos construir um futuro mais verde juntos!</p>
+    </section>
+  </main>
+
+  <div class="botoes-acao">
+    <a href="index.html" class="botao">🏠 Voltar para o QG</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+
+  <footer>
+    Feito com 💚 por Green Flames
+  </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heróis da Natureza</title>
+  <link rel="stylesheet" href="geral.css1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <header>
+  <h1>Heróis da Natureza</h1>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="index.html">QG da natureza</a>
+    <a href="conhecaovilao.html">Conheça o vilão!</a>
+    <a href="chamasverdes.html">Time de heróis!</a>
+    <a href="jogos.html">Treinamento do herói</a>
+  </nav>
+</header>
+
+<main class="home">
+
+  <picture>
+    <!-- Imagem para telas menores -->
+    <source media="(max-width: 768px)" srcset="imagens/bannerherois.png">
+
+    <!-- Imagem padrão -->
+    <img src="imagens/bannerherois.png.png" alt="Heróis da Natureza" class="banner">
+  </picture>
+
+  <section class="intro">
+    <h2> Olá, pequeno grande herói da natureza!</h2>
+    <p> Você foi escolhido para uma missão muito especial: proteger o nosso planeta!</p>
+
+    <p>🌟 Este é o nosso QG da Natureza, a base secreta dos heróis verdes!
+       Aqui, você vai aprender tudo o que precisa para combater um dos maiores perigos do meio ambiente: o fogo das queimadas!</p>
+
+    <p>🔥 Nosso inimigo número um são as queimadas — e precisamos da sua ajuda para vencê-las!
+       Com coragem, conhecimento e atitude, você pode fazer a diferença!</p>
+
+    <p>🦸‍♂️🦸‍♀️ E todo herói sabe que a força está na união!
+       Por isso, chame seus amigos e forme sua própria liga de heróis da natureza!
+       Juntos, podemos proteger florestas, animais e o nosso futuro.</p>
+
+    <p>✨ Está pronto para começar essa aventura?
+      Então... vamos nessa! O planeta conta com você!</p>
+  </section>
+
+</main>
+
+<div class="botoes-acao">
+  <a href="jogos.html" class="botao">🎮 Começar o treinamento do herói</a>
+  <a href="chamasverdes.html" class="botao">🦸‍♂️🦸‍♀️ Conheça o time de heróis!</a>
+  <a href="conhecaovilao.html" class="botao">🔥 Conheça o Vilão</a>
+</div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+</script>
+
+<footer>
+  Feito com 💚 por Green Flames
+</footer>
+
+</body>
+</html>

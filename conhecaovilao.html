@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conheça o Vilão - Heróis da Natureza</title>
+  <link rel="stylesheet" href="geral.css1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Heróis da Natureza</h1>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <a href="index.html">QG da natureza</a>
+      <a href="conhecaovilao.html">Conheça o vilão!</a>
+      <a href="chamasverdes.html">Time de heróis!</a>
+      <a href="jogos.html">Treinamento do herói</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="imagem-vilao">
+      <!-- Coloque aqui o nome exato da imagem que você subir -->
+      <img src="imagens/vilao.png.png" alt="Vilão das Queimadas">
+    </section>
+
+    <section class="descricao">
+      <h2>🔥 Conheça o Vilão: Foguinho, o Monstro das Queimadas! 🔥</h2>
+
+      <p>Cuidado, herói! Um grande perigo ronda florestas, campos e cidades: 
+      <strong>Foguinho, o Monstro das Queimadas!</strong> Ele destrói plantas, assusta animais, polui o ar e coloca vidas em risco.</p>
+
+      <p>Esse vilão nasce de atitudes perigosas, como jogar bituca de cigarro no chão, fazer fogueiras em locais errados ou soltar balões. 
+      Mas não se preocupe — você pode enfrentá-lo!</p>
+
+      <div class="texto-final">
+        <h3>O que eu, herói da natureza, posso fazer?</h3>
+        <p>Com atitudes simples, você já começa a vencer essa batalha:</p>
+        <ul>
+          <li>🌿 Nunca brincar com fogo perto da natureza.</li>
+          <li>🚫 Avisar um adulto se vir fumaça ou queimadas.</li>
+          <li>💧 Cuidar das plantas e manter o solo úmido.</li>
+          <li>♻️ Não jogar lixo no mato e ajudar a separar o reciclável.</li>
+        </ul>
+        <p>Com coragem e cuidado, você se torna um verdadeiro guardião do planeta!</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="botoes-acao">
+    <a href="index.html" class="botao">🏠 Voltar para o QG</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+
+  <footer>
+    Feito com 💚 por Green Flames
+  </footer>
+</body>
+</html>
